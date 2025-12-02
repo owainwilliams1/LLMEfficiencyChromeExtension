@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+  <title>Detected Words</title>
+  <style>
+      body {
+          font-family: system-ui, sans-serif;
+          margin: 0;
+          padding: 8px;
+      }
+
+      .container {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+
+      .wrapper {
+          max-width: 480px;
+          width: 100%;
+          font-size: 16px;
+          color: #4b5563;
+          line-height: 1.4;
+      }
+
+      #words {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+      }
+
+      .correction {
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+          "Helvetica Neue", Arial, sans-serif;
+      }
+
+      /* <details> card container */
+      .correction-dropdown {
+          border-radius: 16px;
+          border: 1px solid #e0e0e5;
+          background: #ffffff;
+          padding: 12px 16px;
+          margin: 8px 0;
+          box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+      }
+
+      /* header row */
+      .correction-header {
+          display: flex;
+          list-style: none;
+          cursor: pointer;
+      }
+
+      /* remove default triangle marker */
+      .correction-header::-webkit-details-marker {
+          display: none;
+      }
+
+      .correction-dropdown summary::marker {
+          content: "";
+      }
+
+      /* pink pill (right) */
+      .correction-pill {
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+          color: #c026d3;
+      }
+
+      /* body content */
+      .correction-body {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          margin-top: 10px;
+          border-top: 1px solid #f1f2f6;
+      }
+
+      /* description text */
+      .correction-description {
+
+      }
+
+      /* "Replace with" row */
+      .correction-replacement {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+      }
+
+      /* label text */
+      .correction-replacement .label {
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+          color: #9ca3af;
+      }
+
+      /* old target text */
+      .correction-body .target {
+          background: #fdf2ff;
+          color: #c026d3;
+      }
+
+      /* suggested correction text */
+      .correction-body .replacement {
+
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <h3 style="margin-left:16px" class="title">Suggestions</h3>
+      <div id="corrections"><p style='margin-left: 16px'>Start typing your prompt to get started &#128526;</p></div>
+    </div>
+  </div>
+  <script src="sidePanel.js"></script>
+</body>
+</html>

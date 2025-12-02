@@ -1,0 +1,31 @@
+{
+  "name": "AI Eco Tracker",
+  "description": "AI Eco Tracker suggests improvements to make your prompts more environmentally friendly!",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "serviceWorker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.perplexity.ai/*"],
+      "js": ["perplexity.js"]
+    }
+  ],
+  "permissions": ["sidePanel", "scripting", "activeTab", "tabs"],
+  "action": {
+    "default_title": "AI Eco Tracker",
+    "default_icon": {
+      "16": "/icons/16x.png",
+      "32": "/icons/32x.png",
+      "48": "/icons/48x.png",
+      "128": "/icons/128x.png"
+    }
+  },
+  "icons": {
+    "16": "/icons/16x.png",
+    "32": "/icons/32x.png",
+    "48": "/icons/48x.png",
+    "128": "/icons/128x.png"
+  }
+}
